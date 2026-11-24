@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Consumer Behavior Management | Danial Oveidi</title>
+<meta name="description" content="یک وب‌سایت شخصی و آکادمیک درباره مدیریت رفتار مصرف‌کننده، تحقیقات، ارائه‌ها، تحلیل برندها، کتاب‌ها و مطالعات دانیال عویدی.">
+<meta name="keywords" content="Consumer Behavior, Consumer Behavior Management, Customer Behavior, Consumer Psychology, Marketing, Branding, Customer Experience, Management, رفتار مصرف‌کننده">
+<meta name="author" content="Danial Oveidi">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Consumer Behavior Management | Danial Oveidi">
+<meta property="og:description" content="وب‌سایت آکادمیک دانیال عویدی درباره مدیریت رفتار مصرف‌کننده: تحقیقات، ارائه‌ها، کتاب‌ها و پرونده برندها.">
+<meta property="og:locale" content="fa_IR">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23173C35'/%3E%3Ctext x='32' y='41' font-family='Georgia,serif' font-size='28' font-weight='700' text-anchor='middle' fill='%23C9A45C'%3EDO%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Vazirmatn:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F7F6F2;--surface:#fff;--ink:#111;--muted:#55574F;--line:#E2E0D8;
+  --green:#173C35;--gold:#C9A45C;--goldtx:#7A5A14;--soft:#EFEDE6;
+  --font:'Vazirmatn','Inter',Tahoma,sans-serif;--en:'Inter','Vazirmatn',sans-serif;
+  color-scheme:light;
+}
+:root[data-theme="dark"]{
+  --bg:#0F1412;--surface:#171E1B;--ink:#F3F2ED;--muted:#B8C0BB;--line:#2C3733;
+  --green:#E6C98A;--gold:#C9A45C;--goldtx:#E6C98A;--soft:#1C2420;color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.95;font-size:16px;transition:background .25s,color .25s}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:4px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+.en{font-family:var(--en);direction:ltr;unicode-bidi:isolate}
+.eyebrow{font-family:var(--en);font-size:12px;letter-spacing:.14em;color:var(--muted);direction:ltr;text-align:right;margin:0 0 8px}
+.eyebrow i{color:var(--goldtx);font-style:normal;font-weight:600}
+
+/* header */
+header.site{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;gap:18px;height:68px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex:none}
+.logo{width:40px;height:40px;border-radius:9px;background:var(--green);color:var(--gold);display:grid;place-items:center;font-family:var(--en);font-weight:800;font-size:16px;letter-spacing:.04em}
+:root[data-theme="dark"] .logo{color:#0F1412;background:var(--gold)}
+.brand b{display:block;font-family:var(--en);font-size:13px;letter-spacing:.12em;line-height:1.3}
+.brand small{display:block;font-family:var(--en);font-size:9.5px;letter-spacing:.14em;color:var(--muted);line-height:1.3}
+nav.main{margin-inline-start:auto;display:flex;gap:4px}
+nav.main a{text-decoration:none;font-size:14px;padding:6px 10px;border-radius:8px;color:var(--muted);white-space:nowrap}
+nav.main a:hover{color:var(--ink)}
+nav.main a[aria-current="page"]{color:var(--ink);font-weight:700;box-shadow:inset 0 -2px 0 var(--gold);border-radius:0}
+.iconbtn{flex:none;width:40px;height:40px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:10px;cursor:pointer;display:grid;place-items:center;font-size:17px}
+.iconbtn:hover{border-color:var(--gold)}
+#burger{display:none}
+
+/* hero */
+.hero{padding:72px 0 56px;border-bottom:1px solid var(--line)}
+.hero .grid{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
+.hero h1{font-family:var(--en);font-weight:800;font-size:clamp(34px,6vw,68px);line-height:1.08;letter-spacing:-.02em;margin:0 0 22px;direction:ltr;text-align:right}
+.hero h1 span{background:linear-gradient(transparent 80%,var(--gold) 80%,var(--gold) 92%,transparent 92%)}
+.hero .qs{font-size:clamp(17px,2.2vw,22px);font-weight:500;line-height:2;margin:0 0 22px;color:var(--ink)}
+.who{margin:0 0 26px;color:var(--muted);font-size:15px}
+.who b{color:var(--ink);font-size:18px;display:block}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;min-height:46px;padding:0 24px;border-radius:10px;font:inherit;font-weight:600;font-size:15px;text-decoration:none;border:1px solid var(--green);cursor:pointer;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.p{background:var(--green);color:#fff}
+:root[data-theme="dark"] .btn.p{background:var(--gold);border-color:var(--gold);color:#0F1412}
+.btn.s{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.s:hover{border-color:var(--gold)}
+.btn.off{opacity:.45;pointer-events:none}
+.slogan{font-size:14px;color:var(--muted);margin-top:26px;padding-right:14px;border-right:2px solid var(--gold)}
+
+/* concept art */
+.art{background:var(--soft);border:1px solid var(--line);border-radius:16px;padding:20px}
+.art svg{width:100%;height:auto;display:block}
+.art .cap{font-size:12px;color:var(--muted);text-align:center;margin-top:8px}
+
+/* sections */
+section.sec{padding:64px 0 8px}
+.sec h2{font-size:clamp(26px,3.6vw,38px);font-weight:900;line-height:1.5;margin:0 0 8px}
+.sec .sub{color:var(--muted);margin:0 0 28px;max-width:62ch}
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.intro p{margin:0 0 14px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.stat b{display:block;font-size:20px;font-weight:800;line-height:1.5}
+.stat b.num{font-family:var(--en);font-size:30px}
+.stat span{font-size:13px;color:var(--muted)}
+.course{margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+
+/* cards */
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px;box-shadow:0 1px 2px rgba(0,0,0,.03);transition:transform .25s,border-color .25s;display:flex;flex-direction:column;gap:10px}
+.card:hover{transform:translateY(-3px);border-color:var(--gold)}
+.card h3{margin:0;font-size:18px;line-height:1.7}
+.card p{margin:0;font-size:14.5px;color:var(--muted)}
+.badge{align-self:flex-start;font-family:var(--en);font-size:10.5px;letter-spacing:.1em;font-weight:600;color:var(--ink);border:1px solid var(--gold);background:var(--soft);padding:1px 10px;border-radius:999px;direction:ltr}
+.meta{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13px;color:var(--muted)}
+.kw{display:flex;flex-wrap:wrap;gap:6px}
+.kw span{font-size:12.5px;background:var(--soft);padding:0 10px;border-radius:999px;color:var(--muted)}
+.acts{display:flex;gap:8px;margin-top:auto;padding-top:6px;flex-wrap:wrap}
+.acts .btn{min-height:36px;padding:0 14px;font-size:13px}
+.pending{font-size:13px;color:var(--muted);border:1px dashed var(--line);border-radius:8px;padding:6px 12px;text-align:center}
+
+/* tabs */
+.tabs{display:flex;gap:6px;margin-bottom:24px;border-bottom:1px solid var(--line);overflow-x:auto}
+.tab{flex:none;font:inherit;font-size:15px;background:none;border:0;border-bottom:2px solid transparent;color:var(--muted);padding:8px 18px;cursor:pointer;margin-bottom:-1px}
+.tab[aria-selected="true"]{color:var(--ink);font-weight:700;border-color:var(--gold)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.chip{font:inherit;font-size:13.5px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:2px 14px;border-radius:999px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:#fff}
+:root[data-theme="dark"] .chip[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:#0F1412}
+
+/* books */
+.book{flex-direction:row;gap:16px}
+.cover{flex:none;width:64px;min-height:92px;border-radius:5px;background:#173C35;color:#E6C98A;display:grid;place-items:center;font-family:var(--en);font-weight:800;font-size:13px;text-align:center;padding:6px;line-height:1.3}
+.book .bd{display:flex;flex-direction:column;gap:6px}
+.book .by{font-size:13px;color:var(--muted)}
+.main-book{grid-column:1/-1;border-color:var(--gold)}
+.field{font-size:14px}
+.field b{color:var(--ink);font-weight:700}
+.todo{color:var(--muted);font-style:normal}
+
+/* brand dossier */
+details.dos{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+details.dos summary{list-style:none;cursor:pointer;padding:18px 22px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+details.dos summary::-webkit-details-marker{display:none}
+details.dos summary h3{margin:0;font-size:19px;flex:1;min-width:140px}
+details.dos summary h3 small{font-family:var(--en);color:var(--muted);font-size:12.5px;font-weight:400;margin-inline-start:8px}
+details.dos summary::after{content:"+";font-size:22px;color:var(--gold);line-height:1}
+details.dos[open] summary::after{content:"−"}
+details.dos[open]{border-color:var(--gold)}
+.dos .inner{padding:4px 22px 22px;display:grid;gap:14px;border-top:1px solid var(--line)}
+.dos ol.f{list-style:none;margin:0;padding:0;display:grid;gap:12px;counter-reset:k}
+.dos ol.f li{counter-increment:k;padding-top:12px;border-top:1px dashed var(--line);font-size:14.5px}
+.dos ol.f li:first-child{border-top:0;padding-top:0}
+.dos ol.f li h4{margin:0 0 2px;font-size:14px;color:var(--green)}
+:root[data-theme="dark"] .dos ol.f li h4{color:var(--gold)}
+.dos ol.f li h4::before{content:counter(k,decimal-leading-zero) " ";font-family:var(--en);color:var(--gold);font-size:12px}
+.dos ul.tl{margin:4px 0 0;padding:0 18px 0 0;font-size:14px}
+.dos ul.tl b{font-variant-numeric:tabular-nums}
+.grp{margin:34px 0 14px;font-size:20px;font-weight:800;display:flex;align-items:center;gap:10px}
+.grp::after{content:"";flex:1;height:1px;background:var(--line)}
+.stack{display:grid;gap:12px}
+
+/* people */
+.person .ph{width:56px;height:56px;border-radius:50%;background:var(--soft);border:1px solid var(--line);display:grid;place-items:center;color:var(--muted);font-family:var(--en);font-weight:700;font-size:15px}
+.person .row{display:flex;gap:14px;align-items:center}
+.person .row h3 small{display:block;font-size:12.5px;color:var(--muted);font-weight:400;font-family:var(--en)}
+
+/* about / final */
+.prose{max-width:68ch}
+.prose p{margin:0 0 16px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0}
+.tags span{border:1px solid var(--line);background:var(--surface);padding:2px 14px;border-radius:999px;font-size:14px}
+.fp{display:grid;gap:12px}
+.fp .card{flex-direction:row;align-items:flex-start;gap:16px}
+.fp .n{font-family:var(--en);color:var(--gold);font-weight:800;font-size:15px;flex:none;width:28px}
+.status{display:inline-block;font-size:13px;color:var(--muted);border:1px dashed var(--gold);border-radius:999px;padding:0 14px;margin-bottom:24px}
+.refs{margin-top:44px;border-top:1px solid var(--line);padding-top:20px}
+.refs h3{margin:0 0 10px;font-size:17px}
+.refs ul{margin:0;padding:0 18px 0 0;font-size:14px;color:var(--muted);columns:2;column-gap:36px}
+.refs li{margin-bottom:6px;break-inside:avoid}
+.note{font-size:13.5px;color:var(--muted);margin-top:18px}
+
+/* progress */
+#prog{position:fixed;top:0;right:0;height:3px;width:0;background:var(--gold);z-index:50}
+
+/* banner */
+.banner{position:relative;overflow:hidden;background:#0F2A25;color:#F4F1E8;padding:60px 0 50px}
+.banner::before{content:"";position:absolute;inset:-40%;background:radial-gradient(circle at 20% 30%,rgba(201,164,92,.22),transparent 40%),radial-gradient(circle at 80% 70%,rgba(255,255,255,.08),transparent 45%);animation:drift 18s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate(4%,3%) rotate(3deg)}}
+.banner .wrap{position:relative}
+.banner .mono{position:absolute;left:10px;top:-30px;font-family:var(--en);font-weight:800;font-size:clamp(140px,26vw,300px);line-height:1;color:transparent;-webkit-text-stroke:1px rgba(230,201,138,.28);user-select:none;pointer-events:none;animation:fl 9s ease-in-out infinite}
+.banner .tag{font-family:var(--en);letter-spacing:.22em;font-size:12px;color:#E6C98A;direction:ltr;text-align:right;margin:0}
+.banner h1.nm{font-size:clamp(46px,10vw,112px);font-weight:900;line-height:1.2;margin:6px 0 0;animation:up .9s ease both}
+.banner .nm-en{font-family:var(--en);font-weight:600;letter-spacing:.36em;font-size:clamp(13px,2.4vw,22px);color:#E6C98A;direction:ltr;text-align:right;margin:0 0 6px;animation:up .9s .15s ease both}
+.banner .course-en{font-family:var(--en);font-size:12px;letter-spacing:.18em;color:#B9C7C2;direction:ltr;text-align:right;margin:0 0 30px}
+.banner .info{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.16);border-radius:14px;overflow:hidden;animation:up .9s .3s ease both}
+.banner .info div{background:#0F2A25;padding:14px 18px}
+.banner .info span{display:block;font-size:12px;color:#B9C7C2}
+.banner .info b{font-size:15px;font-weight:700;line-height:1.8;color:#fff}
+@keyframes up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes fl{50%{transform:translateY(-9px)}}
+
+/* hero art motion */
+.fl{animation:fl 6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.fl.b{animation-delay:-2s}.fl.c{animation-delay:-4s}
+.dash{stroke-dasharray:3 4;animation:dash 3s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-14}}
+.pl{animation:pl 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes pl{50%{transform:scale(1.4)}}
+
+/* marquee */
+.mq{direction:ltr;overflow:hidden;border-block:1px solid var(--line);background:var(--surface);padding:13px 0;white-space:nowrap}
+.mq div{display:inline-flex;animation:mq 38s linear infinite}
+.mq span{direction:rtl;font-weight:700;font-size:17px;padding-inline-end:44px}
+.mq span::after{content:"◆";color:var(--gold);margin-inline-start:44px;font-size:10px}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.stp{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;position:relative;transition:transform .25s,border-color .25s}
+.stp:hover{transform:translateY(-3px);border-color:var(--gold)}
+.stp .n{font-family:var(--en);font-weight:800;font-size:30px;color:var(--gold);line-height:1}
+.stp b{display:block;margin:8px 0 2px;font-size:16px}
+.stp span{font-size:13.5px;color:var(--muted);line-height:1.8;display:block}
+
+/* concepts */
+.cg{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.cg .card{gap:8px}
+.ic{width:44px;height:44px;color:var(--goldtx);fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:transform .35s}
+.card:hover .ic{transform:rotate(-8deg) scale(1.08)}
+.cg h3{font-size:16.5px}
+
+/* tiles */
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tile{display:block;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px;transition:transform .25s,border-color .25s,background .25s;position:relative;overflow:hidden}
+.tile:hover{transform:translateY(-4px);border-color:var(--gold)}
+.tile .n{font-family:var(--en);font-weight:800;font-size:42px;color:transparent;-webkit-text-stroke:1px var(--gold);line-height:1;transition:transform .3s}
+.tile:hover .n{transform:translateX(-6px)}
+.tile b{display:block;font-size:18px;margin:8px 0 2px}
+.tile span{font-size:14px;color:var(--muted)}
+
+/* process / strip */
+.proc{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:26px}
+.proc div{border-top:2px solid var(--gold);padding:10px 4px 0;font-size:14px}
+.proc b{display:block;font-size:15px}
+.proc span{color:var(--muted);font-size:13px}
+.strip{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.strip span{font-size:13px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:0 12px}
+.strip i{font-style:normal;font-family:var(--en);color:var(--goldtx);font-weight:700;margin-inline-end:6px;font-size:11.5px}
+.chap{margin-top:34px}
+.chap details{background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:10px}
+.chap summary{cursor:pointer;padding:14px 20px;font-weight:700}
+.chap .cb{padding:0 20px 18px;font-size:14.5px}
+
+/* footer */
+footer.site{margin-top:90px;border-top:1px solid var(--line);background:var(--surface);padding:34px 0 26px}
+footer .cols{display:flex;flex-wrap:wrap;gap:20px 40px;justify-content:space-between;align-items:flex-end}
+footer b{font-family:var(--en);letter-spacing:.12em;font-size:14px;display:block}
+footer .cbm{font-family:var(--en);font-size:11px;letter-spacing:.14em;color:var(--muted);display:block}
+footer p{margin:8px 0 0;font-size:14px;color:var(--muted)}
+footer .sig{font-family:var(--en);color:var(--gold);letter-spacing:.14em;font-size:13px}
+.copy{margin-top:22px;padding-top:14px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+
+/* pages & reveal */
+.page{display:none}
+.page.on{display:block;animation:fade .45s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.rv{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:980px){
+  nav.main{position:fixed;inset:68px 0 auto 0;flex-direction:column;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 22px 18px;display:none;gap:0;margin:0}
+  nav.main.open{display:flex}
+  nav.main a{padding:12px 4px;font-size:16px;border-bottom:1px solid var(--line)}
+  nav.main a[aria-current="page"]{box-shadow:none;color:var(--green)}
+  #burger{display:grid;margin-inline-start:auto}
+  header.site .iconbtn#theme{margin-inline-start:0}
+  .hero .grid,.intro{grid-template-columns:1fr;gap:32px}
+  .grid3,.tiles{grid-template-columns:repeat(2,1fr)}
+  .cg{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .banner .info{grid-template-columns:repeat(2,1fr)}
+  .proc{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:520px){.cg,.tiles,.steps{grid-template-columns:1fr}.banner .info{grid-template-columns:1fr}}
+@media (max-width:640px){
+  .grid2,.grid3,.course{grid-template-columns:1fr}
+  .hero{padding:44px 0 36px}
+  .refs ul{columns:1}
+  .btn{flex:1;justify-content:center}
+  .brand small{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#home" aria-label="خانه">
+      <span class="logo">DO</span>
+      <span><b>DANIAL OVEIDI</b><small>CONSUMER BEHAVIOR MANAGEMENT</small></span>
+    </a>
+    <nav class="main" id="nav" aria-label="منوی اصلی">
+      <a href="#home">خانه</a>
+      <a href="#research">تحقیقات و ارائه‌ها</a>
+      <a href="#library">کتابخانه</a>
+      <a href="#brands">پرونده برندها</a>
+      <a href="#people">مشاهیر و مدیران</a>
+      <a href="#about">درباره دانیال</a>
+      <a href="#final">پروژه نهایی</a>
+    </nav>
+    <button class="iconbtn" id="theme" type="button" aria-label="تغییر حالت تیره و روشن">◐</button>
+    <button class="iconbtn" id="burger" type="button" aria-label="باز کردن منو" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main>
+
+<!-- HOME -->
+<div class="page" id="p-home">
+  <section class="banner" aria-label="معرفی">
+    <div class="mono" aria-hidden="true">DO</div>
+    <div class="wrap">
+      <p class="tag">DO / 1405 — PERSONAL ACADEMIC PORTFOLIO</p>
+      <h1 class="nm">دانیال عویدی</h1>
+      <p class="nm-en">DANIAL OVEIDI</p>
+      <p class="course-en">CONSUMER BEHAVIOR MANAGEMENT</p>
+      <div class="info">
+        <div><span>مقطع و رشته</span><b>کارشناسی ارشد مدیریت بازرگانی</b></div>
+        <div><span>نام درس</span><b>مدیریت رفتار مصرف‌کننده</b></div>
+        <div><span>استاد</span><b>دکتر علی امیدی</b></div>
+        <div><span>دانشگاه</span><b>دانشگاه آزاد اسلامی اهواز، واحد علوم و تحقیقات</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero">
+    <div class="wrap grid">
+      <div>
+        <p class="eyebrow">DO / 1405</p>
+        <h1>CONSUMER<br><span>BEHAVIOR</span><br>MANAGEMENT</h1>
+        <p class="qs">چرا می‌خریم؟ چرا انتخاب می‌کنیم؟ و چه چیزی باعث می‌شود یک برند را انتخاب کنیم؟</p>
+        <p class="who"><b>دانیال عویدی</b>مدیریت رفتار مصرف‌کننده<br>استاد: دکتر علی امیدی</p>
+        <div class="btns">
+          <a class="btn p" href="#research">مشاهده تحقیقات</a>
+          <a class="btn s" href="#brands">پرونده برندها</a>
+        </div>
+        <p class="slogan">از آنچه مصرف می‌کنیم تا چراییِ انتخاب آن</p>
+      </div>
+      <div class="art" aria-hidden="true">
+        <svg viewBox="0 0 400 320" fill="none" stroke="currentColor" stroke-width="1.4">
+          <g style="color:var(--muted)">
+            <rect x="40" y="170" width="150" height="110" rx="6" fill="var(--surface)"/>
+            <path d="M115 170v110"/>
+            <path d="M58 196h40M58 212h30M132 196h40M132 212h28" stroke-width="1"/>
+            <rect x="220" y="196" width="140" height="84" rx="6" fill="var(--surface)"/>
+            <path d="M205 280h170" stroke-linecap="round"/>
+            <path d="M240 215l20 14-20 14M274 245h30" stroke="var(--gold)" stroke-width="2" stroke-linecap="round"/>
+          </g>
+          <g style="color:var(--ink)">
+            <path class="dash" d="M107 82l80 34M200 62v44M293 90l-82 28" stroke-width="1.2"/>
+            <g class="fl"><circle cx="90" cy="70" r="24" fill="var(--surface)"/><text x="90" y="74" text-anchor="middle" font-size="11" fill="currentColor" stroke="none">نیاز</text></g>
+            <g class="fl b"><circle cx="200" cy="40" r="24" fill="var(--surface)"/><text x="200" y="44" text-anchor="middle" font-size="11" fill="currentColor" stroke="none">ادراک</text></g>
+            <g class="fl c"><circle cx="310" cy="80" r="24" fill="var(--surface)"/><text x="310" y="84" text-anchor="middle" font-size="11" fill="currentColor" stroke="none">برند</text></g>
+            <circle class="pl" cx="200" cy="120" r="14" fill="var(--gold)" stroke="none"/>
+          </g>
+        </svg>
+        <div class="cap">تصویر مفهومی: تصمیم، یادداشت و کتاب</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <p class="eyebrow">DO / <i>1405</i></p>
+      <h2>از رفتار انسان تا رفتار بازار</h2>
+      <div class="intro">
+        <div class="prose rv">
+          <p>برای من، رفتار مصرف‌کننده فقط پاسخ به این پرسش نیست که چرا یک محصول را می‌خریم؛ تلاشی است برای فهمیدن اینکه نیازها، احساسات، تجربه‌ها، فرهنگ، برند و حتی تصمیم‌های ناخودآگاه چطور روی انتخاب‌هایمان اثر می‌گذارند.</p>
+          <p>این سایت دفتر مطالعاتی من در طول این ترم است. تحقیق‌ها، ارائه‌ها، کتاب‌هایی که می‌خوانم و برندهایی که از زاویه رفتار مصرف‌کننده تحلیل می‌کنم، به‌مرور اینجا جمع می‌شود. بخش‌هایی که هنوز کامل نشده را عمداً خالی گذاشته‌ام تا چیزی ساختگی در آن نباشد.</p>
+        </div>
+        <div class="stats rv" id="stats"></div>
+      </div>
+      <div class="course rv">
+        <div class="stat"><span>درس</span><b>مدیریت رفتار مصرف‌کننده</b></div>
+        <div class="stat"><span>استاد</span><b>دکتر علی امیدی</b></div>
+        <div class="stat"><span>کتاب اصلی</span><b class="en" style="font-size:15px">Consumer Behavior — Michael R. Solomon</b><span>ترجمه دکتر کامبیز حیدرزاده</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="mq" aria-hidden="true" style="margin-top:56px">
+    <div>
+      <span>چرا می‌خریم؟</span><span>چرا انتخاب می‌کنیم؟</span><span>چه چیزی ما را به یک برند وفادار می‌کند؟</span><span>تصمیم خرید از کجا شروع می‌شود؟</span><span>از آنچه مصرف می‌کنیم تا چراییِ انتخاب آن</span>
+      <span>چرا می‌خریم؟</span><span>چرا انتخاب می‌کنیم؟</span><span>چه چیزی ما را به یک برند وفادار می‌کند؟</span><span>تصمیم خرید از کجا شروع می‌شود؟</span><span>از آنچه مصرف می‌کنیم تا چراییِ انتخاب آن</span>
+    </div>
+  </div>
+
+  <section class="sec"><div class="wrap">
+    <p class="eyebrow">FRAMEWORK / <i>DECISION PROCESS</i></p>
+    <h2>مسیر تصمیم خرید</h2>
+    <p class="sub">چارچوبی که پرونده‌ی برندها و کتاب‌ها را با آن می‌خوانم: مصرف‌کننده از حس یک نیاز تا ارزیابی پس از خرید این پنج مرحله را طی می‌کند.</p>
+    <div class="steps">
+      <div class="stp rv"><div class="n">01</div><b>تشخیص نیاز</b><span>فاصله‌ی وضع فعلی تا وضع مطلوب</span></div>
+      <div class="stp rv"><div class="n">02</div><b>جستجوی اطلاعات</b><span>حافظه، اطرافیان، رسانه و فروشگاه</span></div>
+      <div class="stp rv"><div class="n">03</div><b>ارزیابی گزینه‌ها</b><span>معیارها، نگرش و ادراک از برند</span></div>
+      <div class="stp rv"><div class="n">04</div><b>انتخاب و خرید</b><span>قیمت، اعتماد و ریسک ادراک‌شده</span></div>
+      <div class="stp rv"><div class="n">05</div><b>پس از خرید</b><span>رضایت، وفاداری و تجربه‌ی بعدی</span></div>
+    </div>
+  </div></section>
+
+  <section class="sec"><div class="wrap">
+    <p class="eyebrow">CONCEPTS / <i>KEY IDEAS</i></p>
+    <h2>مفاهیم کلیدی درس</h2>
+    <p class="sub">هشت مفهوم اصلی که در طول ترم به آن‌ها برمی‌گردم. این‌ها مرور کلی هستند؛ خلاصه‌ی دقیق کتاب اصلی را در بخش کتابخانه اضافه می‌کنم.</p>
+    <div class="cg" id="concepts"></div>
+  </div></section>
+
+  <section class="sec"><div class="wrap">
+    <p class="eyebrow">EXPLORE / <i>SECTIONS</i></p>
+    <h2>از کجا شروع کنم؟</h2>
+    <p class="sub">هر بخش سایت یک بخش از مسیر مطالعه‌ی من است.</p>
+    <div class="tiles" id="tiles"></div>
+  </div></section>
+</div>
+
+<!-- RESEARCH -->
+<div class="page" id="p-research">
+  <section class="sec"><div class="wrap">
+    <p class="eyebrow">01 / <i>WORK</i></p>
+    <h2>تحقیقات و ارائه‌ها</h2>
+    <p class="sub">کارهای من در طول ترم. هر مورد جدید فقط با اضافه شدن یک آیتم به فایل داده‌ها (بخش RESEARCH و PRESENTATIONS در انتهای همین فایل) در اینجا ظاهر می‌شود.</p>
+    <div class="proc">
+      <div class="rv"><b>۱. انتخاب موضوع</b><span>یک پرسش از دل درس</span></div>
+      <div class="rv"><b>۲. مطالعه و منبع</b><span>کتاب، مقاله و گزارش رسمی</span></div>
+      <div class="rv"><b>۳. تحلیل و نگارش</b><span>از زاویه‌ی رفتار مصرف‌کننده</span></div>
+      <div class="rv"><b>۴. ارائه در کلاس</b><span>فایل PDF و PPTX اینجا ثبت می‌شود</span></div>
+    </div>
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" id="t-r" aria-selected="true" data-tab="r">تحقیقات من</button>
+      <button class="tab" role="tab" id="t-p" aria-selected="false" data-tab="p">ارائه‌های من</button>
+    </div>
+    <div class="grid2" id="work"></div>
+  </div></section>
+</div>
+
+<!-- LIBRARY -->
+<div class="page" id="p-library">
+  <section class="sec"><div class="wrap">
+    <p class="eyebrow">02 / <i>LIBRARY</i></p>
+    <h2>کتابخانه</h2>
+    <p class="sub">کتاب‌های مرتبط با رفتار مصرف‌کننده، بازاریابی، مدیریت، روان‌شناسی، تجربه مشتری، برندینگ و تصمیم‌گیری. برداشت شخصی هر کتاب را پس از مطالعه می‌نویسم.</p>
+    <div class="chips" id="bookChips" role="group" aria-label="دسته کتاب"></div>
+    <div class="grid2" id="books"></div>
+    <div class="chap" id="chap">
+      <h3 class="grp">خلاصه‌ی کتاب اصلی</h3>
+      <div id="chapList"></div>
+    </div>
+    <p class="note">عنوان‌های فارسی ترجمه تقریبی نام اصلی‌اند و ممکن است با عنوان نسخه منتشرشده فارسی فرق داشته باشند. تصویر جلد را فقط پس از مشخص شدن منبع و اجازه استفاده اضافه می‌کنم.</p>
+  </div></section>
+</div>
+
+<!-- BRANDS -->
+<div class="page" id="p-brands">
+  <section class="sec"><div class="wrap">
+    <p class="eyebrow">03 / <i>BRAND CASES</i></p>
+    <h2>پرونده برندها</h2>
+    <p class="sub">هر برند از زاویه رفتار مصرف‌کننده بررسی می‌شود، نه فقط معرفی. هر پرونده چهارده بخش ثابت دارد؛ بخش‌هایی که هنوز نوشته نشده «در حال تکمیل» است.</p>
+    <div class="strip" id="strip" aria-label="چارچوب تحلیل"></div>
+    <div class="chips" id="brandChips" role="group" aria-label="دسته برند"></div>
+    <div id="brandList"></div>
+    <div class="refs"><h3>منابع پرونده‌ها</h3><ul id="brandRefs"></ul></div>
+    <p class="note">لوگو و عکس رسمی برندها را نگذاشته‌ام چون مالکیت آن‌ها با خود شرکت‌هاست.</p>
+  </div></section>
+</div>
+
+<!-- PEOPLE -->
+<div class="page" id="p-people">
+  <section class="sec"><div class="wrap">
+    <p class="eyebrow">04 / <i>MANAGEMENT</i></p>
+    <h2>مشاهیر و مدیران</h2>
+    <p class="sub">صاحب‌نظران علم مدیریت و مدیرانی که تصمیم‌هایشان با شناخت مشتری و رفتار مصرف‌کننده گره خورده است. هر مورد بعد از تکمیل مطالعه و با منبع پر می‌شود؛ نقل‌قول و تصویر هم فقط با منبع معتبر.</p>
+    <div id="peopleList"></div>
+  </div></section>
+</div>
+
+<!-- ABOUT -->
+<div class="page" id="p-about">
+  <section class="sec"><div class="wrap">
+    <p class="eyebrow">05 / <i>ABOUT</i></p>
+    <h2>درباره دانیال</h2>
+    <div class="intro">
+      <div class="prose">
+        <p><b>دانیال عویدی</b> هستم، دانشجوی مدیریت. این سایت را برای درس «مدیریت رفتار مصرف‌کننده» ساخته‌ام و می‌خواهم مثل یک دفتر مطالعه شخصی در طول ترم رشد کند.</p>
+        <p>چیزی که برای من در این درس جذاب بود این است که بسیاری از تصمیم‌های روزمره‌مان، از انتخاب یک کافه تا وفاداری به یک برند، دلیل‌هایی دارند که معمولاً به آن‌ها فکر نمی‌کنیم. دوست دارم این دلیل‌ها را با مثال‌های واقعی و منبع معتبر بشکافم.</p>
+        <p>موضوع مورد علاقه من <span class="en">Consumer Behavior Management</span> است.</p>
+      </div>
+      <div>
+        <div class="stat" style="margin-bottom:14px"><span>زمینه‌های مورد علاقه</span>
+          <div class="tags">
+            <span>مدیریت</span><span>رفتار مصرف‌کننده</span><span>بازاریابی</span><span>برندینگ</span><span>تجربه مشتری</span><span>سلامت و خدمات</span><span>تحلیل رفتار مشتری</span>
+          </div>
+        </div>
+        <div class="stat"><span>درس و استاد</span><b style="font-size:16px">مدیریت رفتار مصرف‌کننده، دکتر علی امیدی</b></div>
+      </div>
+    </div>
+  </div></section>
+</div>
+
+<!-- FINAL -->
+<div class="page" id="p-final">
+  <section class="sec"><div class="wrap">
+    <p class="eyebrow">06 / <i>FINAL PROJECT</i></p>
+    <h2>پروژه نهایی</h2>
+    <span class="status">در حال شکل‌گیری...</span>
+    <div class="fp" id="fp"></div>
+    <p class="note">این صفحه در پایان ترم با پروژه کامل جایگزین می‌شود.</p>
+  </div></section>
+</div>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <b>DANIAL OVEIDI</b>
+        <span class="cbm">CONSUMER BEHAVIOR MANAGEMENT</span>
+        <p>مدیریت رفتار مصرف‌کننده<br>استاد: دکتر علی امیدی<br>کارشناسی ارشد مدیریت بازرگانی، دانشگاه آزاد اسلامی اهواز، واحد علوم و تحقیقات</p>
+      </div>
+      <span class="sig">DO / 1405</span>
+    </div>
+    <div class="copy"><span class="en">© 1405 Danial Oveidi</span><span>منبع اصلی درس: Solomon, Consumer Behavior</span></div>
+  </div>
+</footer>
+
+<script>
+/* =====================================================
+   داده‌ها — برای افزودن محتوا فقط همین بخش را ویرایش کنید
+   ===================================================== */
+
+/* تحقیقات: هر مورد را به این شکل اضافه کنید
+{title:'عنوان', topic:'موضوع', date:'1405/09/10', summary:'خلاصه', keywords:['کلیدواژه'],
+ sources:['منبع ۱'], pdf:'assets/files/research-1.pdf', pptx:'assets/files/research-1.pptx'} */
+var RESEARCH = [];
+
+/* ارائه‌ها
+{title:'', topic:'', date:'', summary:'', slides:12, pptx:'assets/files/p1.pptx', pdf:'assets/files/p1.pdf', sources:[]} */
+var PRESENTATIONS = [];
+
+var BOOK_CATS = [['all','همه'],['cb','رفتار مصرف‌کننده'],['brand','برندینگ'],['mind','روان‌شناسی و تصمیم'],['mgmt','مدیریت و بازاریابی']];
+var BOOKS = [
+ {main:true, cat:'cb', badge:'BOOK', title:'رفتار مصرف‌کننده', en:'Consumer Behavior: Buying, Having, and Being', author:'Michael R. Solomon', trans:'ترجمه دکتر کامبیز حیدرزاده', topic:'رفتار مصرف‌کننده',
+  summary:'کتاب اصلی درس. خرید را در قالب «خریدن، داشتن و بودن» بررسی می‌کند.', notes:'', mine:''},
+ {cat:'cb', badge:'BOOK', title:'رفتار مصرف‌کننده', en:'Consumer Behavior — Schiffman & Kanuk', author:'Leon Schiffman, Leslie Kanuk', topic:'رفتار مصرف‌کننده', summary:'کتاب درسی کلاسیک دیگر این حوزه، مناسب مقایسه با سولومون.'},
+ {cat:'brand', badge:'BOOK', title:'ساختن برندهای قدرتمند', en:'Building Strong Brands', author:'David Aaker', topic:'برندینگ', summary:'ارزش ویژه برند و اجزای آن را توضیح می‌دهد.'},
+ {cat:'brand', badge:'BOOK', title:'مدیریت استراتژیک برند', en:'Strategic Brand Management', author:'Kevin Lane Keller', topic:'برندینگ', summary:'ارزش ویژه برند از دید مشتری.'},
+ {cat:'brand', badge:'BOOK', title:'جایگاه‌یابی: نبرد برای ذهن شما', en:'Positioning: The Battle for Your Mind', author:'Al Ries, Jack Trout', topic:'برندینگ', summary:'استدلال می‌کند که رقابت اصلی برندها در ذهن مشتری است.'},
+ {cat:'brand', badge:'BOOK', title:'برندها چگونه نمادین می‌شوند', en:'How Brands Become Icons', author:'Douglas Holt', topic:'برندینگ', summary:'نقش روایت فرهنگی در ساخت برندهای نمادین.'},
+ {cat:'mind', badge:'CONSUMER PSYCHOLOGY', title:'تفکر، سریع و کند', en:'Thinking, Fast and Slow', author:'Daniel Kahneman', topic:'تصمیم‌گیری', summary:'دو شیوه تفکر، سریع و شهودی در برابر کند و تحلیلی.'},
+ {cat:'mind', badge:'CONSUMER PSYCHOLOGY', title:'تأثیر: روان‌شناسی اقناع', en:'Influence: The Psychology of Persuasion', author:'Robert Cialdini', topic:'روان‌شناسی مصرف‌کننده', summary:'اصول اقناع و کاربرد آن در فروش و تبلیغات.'},
+ {cat:'mind', badge:'CONSUMER PSYCHOLOGY', title:'تلنگر', en:'Nudge', author:'Richard Thaler, Cass Sunstein', topic:'تصمیم‌گیری', summary:'اثر طراحی گزینه‌ها بر انتخاب مردم.'},
+ {cat:'mind', badge:'CONSUMER PSYCHOLOGY', title:'غیرمنطقی‌های قابل پیش‌بینی', en:'Predictably Irrational', author:'Dan Ariely', topic:'تصمیم‌گیری', summary:'الگوهای منظم در تصمیم‌های غیرمنطقی.'},
+ {cat:'mgmt', badge:'MANAGEMENT', title:'معضل نوآور', en:"The Innovator's Dilemma", author:'Clayton Christensen', topic:'مدیریت', summary:'چرا شرکت‌های موفق در برابر فناوری‌های مخل شکست می‌خورند.'},
+ {cat:'mgmt', badge:'MANAGEMENT', title:'تمرین مدیریت', en:'The Practice of Management', author:'Peter Drucker', topic:'مدیریت', summary:'هدف کسب‌وکار را خلق مشتری می‌داند.'},
+ {cat:'mgmt', badge:'MANAGEMENT', title:'استراتژی رقابتی', en:'Competitive Strategy', author:'Michael Porter', topic:'مدیریت', summary:'چارچوب پنج نیروی رقابتی.'},
+ {cat:'mgmt', badge:'MANAGEMENT', title:'مدیریت بازاریابی', en:'Marketing Management', author:'Philip Kotler, Kevin Lane Keller', topic:'بازاریابی', summary:'مرجع اصلی بازاریابی.'}
+];
+
+var BRAND_CATS = [['all','همه'],['intl','بین‌المللی'],['ir','ایرانی'],['food','Restaurant & Food Brands']];
+var FIELDS = ['معرفی برند','تاریخچه','شروع فعالیت','نقطه عطف','استراتژی برند','رفتار مصرف‌کننده','تجربه مشتری','روان‌شناسی خرید','وفاداری مشتری','اشتباهات برند','عوامل موفقیت','عوامل شکست','تحلیل شخصی دانیال','چیزی که از این برند یاد گرفتم'];
+/* فیلدهای تکمیل‌شده با شماره (۰ تا ۱۳) در filled قرار می‌گیرند */
+var BRANDS = [
+ {name:'Apple', fa:'اپل', cats:['intl']},
+ {name:'Nike', fa:'نایک', cats:['intl'], filled:{3:'۱۹۶۴: فیل نایت و بیل باورمن شرکت Blue Ribbon Sports را راه می‌اندازند. ۱۹۷۱: برند Nike و نشان Swoosh معرفی می‌شود. ۱۹۸۸: کمپین «Just Do It» شروع می‌شود.',5:'نایک مصرف‌کننده را فقط خریدار کفش نمی‌بیند؛ برند به هویت ورزشکاری او وصل می‌شود و او با خرید، تصویر مطلوب خودش را بیان می‌کند.'}},
+ {name:'Coca-Cola', fa:'کوکاکولا', cats:['intl','food'], filled:{3:'۱۹۸۵: کوکاکولا بعد از ۹۹ سال فرمول را عوض می‌کند (New Coke). پس از اعتراض مشتریان، پس از ۷۹ روز فرمول قدیمی با نام Coca-Cola Classic برمی‌گردد.',5:'آزمون طعم نشان داده بود مردم مزه جدید را ترجیح می‌دهند، اما وابستگی عاطفی به نسخه قدیمی را نسنجیده بود. معنای برند فقط طعم نیست.'}},
+ {name:"McDonald's", fa:'مک‌دونالد', cats:['intl','food']},
+ {name:'Starbucks', fa:'استارباکس', cats:['intl','food']},
+ {name:'KFC', fa:'کی‌اف‌سی', cats:['intl','food']},
+ {name:"Domino's", fa:'دومینوز', cats:['intl','food']},
+ {name:'Pizza Hut', fa:'پیتزا هات', cats:['intl','food']},
+ {name:'Shake Shack', fa:'شیک شک', cats:['intl','food']},
+ {name:'IKEA', fa:'ایکیا', cats:['intl']},
+ {name:'Netflix', fa:'نتفلیکس', cats:['intl'], filled:{3:'سال ۲۰۰۰: نتفلیکس به بلاک‌باستر پیشنهاد می‌کند خودش را به ۵۰ میلیون دلار بفروشد و رد می‌شود. تا پایان ۲۰۰۶ تعداد مشترکان به شش میلیون می‌رسد.',5:'نتفلیکس به‌جای اجاره تکی و جریمه دیرکرد، مدل اشتراکی و راحت را جلو گذاشت و ریشه ناراحتی مشتری را به مدل کسب‌وکار تبدیل کرد.'}},
+ {name:'Amazon', fa:'آمازون', cats:['intl']},
+ {name:'LEGO', fa:'لگو', cats:['intl'], filled:{3:'۲۰۰۳: گسترش بی‌رویه محصولات شرکت را نزدیک ورشکستگی می‌برد. ۲۰۰۴: یورگن ویگ کنودستورپ مدیرعامل می‌شود و تمرکز دوباره روی آجر لگو می‌رود.',10:'بازگشت به هسته برند، یعنی ساختن با آجر.'}},
+ {name:'Kodak', fa:'کداک', cats:['intl'], filled:{3:'۱۹۷۵: مهندس کداک اولین دوربین دیجیتال را می‌سازد. ۲۰۱۲: کداک درخواست حمایت از ورشکستگی می‌دهد.',11:'تعریف شرکت به‌عنوان تولیدکننده فیلم، نه ثبت خاطرات، نیاز در حال تغییر مشتری را از دید مدیران پنهان کرد.'}},
+ {name:'Blockbuster', fa:'بلاک‌باستر', cats:['intl'], filled:{3:'۲۰۰۰: پیشنهاد خرید نتفلیکس رد می‌شود. ۲۰۱۰: بلاک‌باستر درخواست حمایت از ورشکستگی می‌دهد.',11:'بخشی از درآمد شرکت از چیزی می‌آمد که مشتری دوست نداشت، یعنی جریمه دیرکرد؛ رقابت و بدهی هم نقش داشتند.'}},
+ {name:'Nokia', fa:'نوکیا (تلفن همراه)', cats:['intl'], filled:{3:'۲۰۰۸: حدود ۴۰ درصد بازار تلفن همراه با نوکیا بود. ۲۰۱۳: مایکروسافت بخش تلفن نوکیا را ۷٫۲ میلیارد دلار می‌خرد.',11:'مصرف‌کننده جدید دنبال اکوسیستم اپلیکیشن و تجربه کاربری بود، نه فقط سخت‌افزار.'}},
+ {name:'Digikala', fa:'دیجی‌کالا', cats:['ir'], filled:{2:'سال ۱۳۸۵ توسط حمید و سعید محمدی تأسیس شد.',5:'در بازار کم‌اعتماد، کاهش ریسک ادراک‌شده با تضمین، مرجوعی و پشتیبانی مهم‌تر از قیمت است.'}},
+ {name:'Snapp', fa:'اسنپ', cats:['ir']},
+ {name:'Kalleh', fa:'کاله', cats:['ir','food']},
+ {name:'Zar Macaron', fa:'زر ماکارون', cats:['ir','food']}
+];
+var BRAND_REFS = [
+ ['Nike: The Swoosh logo history','https://about.nike.com/en/magazine/nike-swoosh-logo-history'],
+ ['Coca-Cola Company: New Coke','https://www.coca-colacompany.com/about-us/history/new-coke-the-most-memorable-marketing-blunder-ever'],
+ ['History.com: New Coke debuts','https://www.history.com/this-day-in-history/april-23/new-coke-debuts-one-of-the-biggest-product-flops-in-history'],
+ ['CNBC: How Netflix almost lost the movie rental wars','https://www.cnbc.com/2020/09/22/how-netflix-almost-lost-the-movie-rental-wars-to-blockbuster.html'],
+ ['Fast Company: Blockbuster bankruptcy','https://www.fastcompany.com/1690654/blockbuster-bankruptcy-decade-decline'],
+ ['PetaPixel: Steve Sasson and the digital camera','https://petapixel.com/how-steve-sasson-invented-the-digital-camera/'],
+ ['Wharton: How innovation almost bankrupted LEGO','https://knowledge.wharton.upenn.edu/article/innovation-almost-bankrupted-lego-until-it-rebuilt-with-a-better-blueprint/'],
+ ['Irish Times: Nokia\'s fall','https://www.irishtimes.com/business/technology/nokia-s-fall-from-king-of-the-mobile-market-to-bargain-buyout-is-a-tale-of-hubris-1.1515021'],
+ ['دیجیاتو: آشنایی با دیجی‌کالا','https://digiato.com/company/getting-know-digikala']
+];
+
+var PEOPLE = [
+ {group:'مشاهیر علم مدیریت', items:[
+  ['Peter Drucker','پیتر دراکر'],['Philip Kotler','فیلیپ کاتلر'],['Michael Porter','مایکل پورتر'],['Tom Peters','تام پیترز'],
+  ['Henry Mintzberg','هنری مینتزبرگ'],['Frederick Taylor','فردریک تیلور'],['Henri Fayol','هانری فایول'],['Daniel Kahneman','دانیل کانمن']]},
+ {group:'مدیران و رهبران موفق', items:[
+  ['Steve Jobs','استیو جابز'],['Jeff Bezos','جف بزوس'],['Howard Schultz','هاوارد شولتز'],['Phil Knight','فیل نایت'],
+  ['Walt Disney','والت دیزنی'],['Reed Hastings','رید هستینگز'],['Sam Walton','سم والتون']]},
+ {group:'مدیران و چهره‌های ایرانی', items:[['در حال انتخاب','چهره‌های ایرانی مرتبط با مدیریت و بازاریابی']]}
+];
+var PERSON_FIELDS = ['زندگی و مسیر حرفه‌ای','ایده مدیریتی','مهم‌ترین تصمیم','نگاه به مشتری','ارتباط با رفتار مصرف‌کننده','موفقیت‌ها و شکست‌ها','نقل‌قول (فقط با منبع معتبر)','چیزی که من از او یاد گرفتم'];
+
+var FINAL = [['عنوان پروژه'],['مسئله'],['سؤال اصلی'],['روش تحقیق'],['یافته‌ها'],['تحلیل'],['نتیجه‌گیری'],['فایل نهایی'],['ارائه نهایی']];
+
+/* =====================================================
+   کد سایت
+   ===================================================== */
+function $(s,r){return (r||document).querySelector(s)}
+function E(tag,cls,txt){var e=document.createElement(tag);if(cls)e.className=cls;if(txt!==undefined)e.textContent=txt;return e}
+var PENDING='در حال تکمیل';
+function isEn(s){return /^[\x00-\x7F]/.test(s)}
+
+/* آمار */
+(function(){
+  var items=[[RESEARCH.length,'تحقیق'],[PRESENTATIONS.length,'ارائه'],[BRANDS.filter(function(b){return b.filled}).length,'پرونده برند (تکمیل‌شده)'],[BOOKS.length,'کتاب و منبع']];
+  var box=$('#stats');
+  items.forEach(function(i){
+    var s=E('div','stat');
+    var b=E('b','num');
+    b.textContent=i[0]>0?i[0].toLocaleString('fa-IR'):PENDING;
+    if(i[0]===0){b.className='';b.style.fontSize='16px'}
+    s.appendChild(b);s.appendChild(E('span','',i[1]));box.appendChild(s);
+  });
+})();
+
+/* تحقیقات و ارائه‌ها */
+var tab='r';
+function fileBtn(label,url,primary){
+  if(!url){var d=E('span','pending',label+': در حال تکمیل');return d}
+  var a=E('a','btn '+(primary?'p':'s'),label);a.href=url;a.target='_blank';a.rel='noopener';return a;
+}
+function renderWork(){
+  var box=$('#work');box.innerHTML='';
+  var list=tab==='r'?RESEARCH:PRESENTATIONS;
+  if(!list.length){
+    var c=E('div','card');
+    c.style.gridColumn='1/-1';
+    c.appendChild(E('span','badge',tab==='r'?'RESEARCH':'PRESENTATION'));
+    c.appendChild(E('h3','',PENDING));
+    c.appendChild(E('p','',tab==='r'?'هنوز تحقیقی منتشر نشده است. اولین تحقیق در طول ترم اینجا اضافه می‌شود.':'هنوز ارائه‌ای منتشر نشده است. اولین ارائه پس از ارائه در کلاس اینجا اضافه می‌شود.'));
+    box.appendChild(c);return;
+  }
+  list.forEach(function(it){
+    var c=E('article','card rv in');
+    c.appendChild(E('span','badge',tab==='r'?'RESEARCH':'PRESENTATION'));
+    c.appendChild(E('h3','',it.title));
+    var m=E('div','meta');m.appendChild(E('span','','موضوع: '+(it.topic||PENDING)));m.appendChild(E('span','','تاریخ: '+(it.date||PENDING)));
+    if(tab==='p')m.appendChild(E('span','','تعداد اسلاید: '+(it.slides||PENDING)));
+    c.appendChild(m);
+    c.appendChild(E('p','',it.summary||PENDING));
+    if(it.keywords&&it.keywords.length){var k=E('div','kw');it.keywords.forEach(function(w){k.appendChild(E('span','',w))});c.appendChild(k)}
+    if(it.sources&&it.sources.length)c.appendChild(E('p','','منابع: '+it.sources.join('، ')));
+    var a=E('div','acts');
+    if(it.pdf){var v=fileBtn('مشاهده PDF',it.pdf,true);a.appendChild(v);var d=fileBtn('دانلود PDF',it.pdf,false);d.setAttribute('download','');a.appendChild(d)}
+    if(it.pptx){var d2=fileBtn('دانلود PPTX',it.pptx,false);d2.setAttribute('download','');a.appendChild(d2)}
+    if(!it.pdf&&!it.pptx)a.appendChild(E('span','pending','فایل: '+PENDING));
+    c.appendChild(a);box.appendChild(c);
+  });
+}
+document.querySelectorAll('[data-tab]').forEach(function(b){
+  b.addEventListener('click',function(){
+    tab=b.getAttribute('data-tab');
+    document.querySelectorAll('[data-tab]').forEach(function(x){x.setAttribute('aria-selected',String(x===b))});
+    renderWork();
+  });
+});
+
+/* چیپ‌ها */
+function chips(box,cats,cur,pick){
+  box.innerHTML='';
+  cats.forEach(function(c){
+    var b=E('button','chip',c[1]);b.type='button';b.setAttribute('aria-pressed',String(c[0]===cur));
+    b.addEventListener('click',function(){pick(c[0])});box.appendChild(b);
+  });
+}
+
+/* کتابخانه */
+var bookCat='all';
+function renderBooks(){
+  chips($('#bookChips'),BOOK_CATS,bookCat,function(c){bookCat=c;renderBooks()});
+  var box=$('#books');box.innerHTML='';
+  BOOKS.filter(function(b){return bookCat==='all'||b.cat===bookCat}).forEach(function(b){
+    var c=E('article','card book'+(b.main?' main-book':''));
+    var cv=E('div','cover',b.main?'SOLOMON':b.author.split(',')[0].split(' ').pop());cv.setAttribute('aria-hidden','true');
+    c.appendChild(cv);
+    var d=E('div','bd');
+    d.appendChild(E('span','badge',b.badge));
+    d.appendChild(E('h3','',b.title));
+    d.appendChild(E('div','by en',b.en));
+    d.appendChild(E('div','by','نویسنده: '+b.author+(b.trans?' · '+b.trans:'')+' · موضوع: '+b.topic));
+    d.appendChild(E('p','',b.summary));
+    if(b.main){
+      [['نکات مهم',b.notes],['برداشت شخصی دانیال',b.mine]].forEach(function(f){
+        var p=E('div','field');p.appendChild(E('b','',f[0]+': '));
+        p.appendChild(E('span','todo',f[1]||PENDING));d.appendChild(p);
+      });
+    }
+    c.appendChild(d);box.appendChild(c);
+  });
+}
+
+/* برندها */
+var brandCat='all';
+function renderBrands(){
+  chips($('#brandChips'),BRAND_CATS,brandCat,function(c){brandCat=c;renderBrands()});
+  var box=$('#brandList');box.innerHTML='';
+  var groups=[['intl','برندهای بین‌المللی'],['ir','برندهای ایرانی']];
+  groups.forEach(function(g){
+    var list=BRANDS.filter(function(b){return b.cats.indexOf(g[0])>-1&&(brandCat==='all'||brandCat===g[0]||b.cats.indexOf(brandCat)>-1)});
+    if(brandCat==='food')list=BRANDS.filter(function(b){return b.cats.indexOf('food')>-1&&b.cats.indexOf(g[0])>-1});
+    if(!list.length)return;
+    var h=E('h3','grp',g[1]);box.appendChild(h);
+    var st=E('div','stack');
+    list.forEach(function(b){
+      var d=E('details','dos');
+      var s=E('summary');
+      var t=E('h3','',b.fa);var sm=E('small','',b.name);t.appendChild(sm);s.appendChild(t);
+      s.appendChild(E('span','badge','BRAND CASE'));
+      if(b.cats.indexOf('food')>-1)s.appendChild(E('span','badge','FOOD'));
+      d.appendChild(s);
+      var inner=E('div','inner');
+      var ol=E('ol','f');
+      FIELDS.forEach(function(f,i){
+        var li=E('li');li.appendChild(E('h4','',f));
+        var txt=b.filled&&b.filled[i];
+        li.appendChild(E('div',txt?'':'todo',txt||PENDING));
+        ol.appendChild(li);
+      });
+      inner.appendChild(ol);d.appendChild(inner);st.appendChild(d);
+    });
+    box.appendChild(st);
+  });
+  var rl=$('#brandRefs');rl.innerHTML='';
+  BRAND_REFS.forEach(function(r){var li=E('li');var a=E('a','',r[0]);a.href=r[1];a.target='_blank';a.rel='noopener';if(isEn(r[0]))a.className='en';li.appendChild(a);rl.appendChild(li)});
+}
+
+/* مشاهیر */
+function renderPeople(){
+  var box=$('#peopleList');box.innerHTML='';
+  PEOPLE.forEach(function(g){
+    box.appendChild(E('h3','grp',g.group));
+    var grid=E('div','grid3');
+    g.items.forEach(function(p){
+      var c=E('article','card person');
+      var row=E('div','row');
+      var ph=E('div','ph',p[0].split(' ').map(function(w){return w[0]}).join('').slice(0,2));ph.setAttribute('aria-hidden','true');
+      row.appendChild(ph);
+      var h=E('h3','',p[1]);h.appendChild(E('small','',p[0]));row.appendChild(h);
+      c.appendChild(row);
+      c.appendChild(E('span','badge',g.group.indexOf('علم')>-1?'MANAGEMENT':'MANAGEMENT'));
+      var det=E('details');det.appendChild(E('summary','',PENDING));
+      var ul=E('ul');ul.style.cssText='margin:8px 0 0;padding:0 18px 0 0;font-size:13.5px;color:var(--muted)';
+      PERSON_FIELDS.forEach(function(f){ul.appendChild(E('li','',f+': '+PENDING))});
+      det.appendChild(ul);c.appendChild(det);grid.appendChild(c);
+    });
+    box.appendChild(grid);
+  });
+}
+
+/* پروژه نهایی */
+(function(){
+  var box=$('#fp');
+  FINAL.forEach(function(f,i){
+    var c=E('div','card');c.appendChild(E('span','n',String(i+1).padStart(2,'0')));
+    var d=E('div');d.appendChild(E('h3','',f[0]));d.appendChild(E('p','',PENDING));c.appendChild(d);box.appendChild(c);
+  });
+})();
+
+/* مسیریابی */
+var PAGES=['home','research','library','brands','people','about','final'];
+function route(){
+  var h=(location.hash||'#home').slice(1);if(PAGES.indexOf(h)<0)h='home';
+  PAGES.forEach(function(p){$('#p-'+p).classList.toggle('on',p===h)});
+  document.querySelectorAll('#nav a').forEach(function(a){
+    if(a.getAttribute('href')==='#'+h)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
+  });
+  $('#nav').classList.remove('open');$('#burger').setAttribute('aria-expanded','false');
+  window.scrollTo(0,0);
+  observe();
+}
+window.addEventListener('hashchange',route);
+
+/* منو */
+$('#burger').addEventListener('click',function(){
+  var o=$('#nav').classList.toggle('open');this.setAttribute('aria-expanded',String(o));
+});
+
+/* حالت تیره */
+function setTheme(t){document.documentElement.setAttribute('data-theme',t);try{localStorage.setItem('theme',t)}catch(e){}}
+(function(){
+  var t=null;try{t=localStorage.getItem('theme')}catch(e){}
+  if(!t)t=window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';
+  document.documentElement.setAttribute('data-theme',t);
+})();
+$('#theme').addEventListener('click',function(){
+  setTheme(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark');
+});
+
+/* ظاهر شدن با اسکرول */
+var io=('IntersectionObserver' in window)?new IntersectionObserver(function(es){
+  es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+},{threshold:.12}):null;
+function observe(){document.querySelectorAll('.rv:not(.in)').forEach(function(n){if(io)io.observe(n);else n.classList.add('in')})}
+
+/* مفاهیم کلیدی */
+var CONCEPTS = [
+ ['انگیزش و نیاز','رفتار با نیازی شروع می‌شود که مصرف‌کننده حس می‌کند، یعنی فاصله‌ی وضع فعلی تا وضع مطلوب. محصول می‌تواند نیاز کارکردی یا نیاز عاطفی و نمادین را جواب دهد.','<path d="M12 20V6M6 12l6-6 6 6"/>'],
+ ['ادراک','مصرف‌کننده همه‌ی محرک‌ها را نمی‌بیند؛ گزینش می‌کند، سازمان می‌دهد و تفسیر می‌کند. رنگ، بسته‌بندی و نام برند در این فرایند اثر دارند.','<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>'],
+ ['یادگیری و حافظه','تکرار، تداعی و تجربه‌ی قبلی تعیین می‌کند کدام برند به ذهن بیاید. برندی که در ذهن نباشد، به فهرست گزینه‌ها راه نمی‌یابد.','<path d="M12 3a6 6 0 0 0-6 6c0 2 1 3 2 4v3h8v-3c1-1 2-2 2-4a6 6 0 0 0-6-6z"/><path d="M9 20h6"/>'],
+ ['نگرش','ارزیابی کلی ما از یک برند که از باور، احساس و آمادگی برای عمل ساخته می‌شود و می‌تواند تغییر کند.','<path d="M12 20s-7-4.500-7-10a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 5.500-7 10-7 10z"/>'],
+ ['خود و هویت','اغلب با خرید، تصویری از خودمان را بیان می‌کنیم. برندها به همین دلیل به شخصیت و هویت وصل می‌شوند.','<circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/>'],
+ ['گروه‌ها و تأثیر اجتماعی','خانواده، دوستان و گروه‌های مرجع روی انتخاب اثر می‌گذارند. توصیه‌ی دیگران گاهی از تبلیغ مؤثرتر است.','<circle cx="8" cy="9" r="3"/><circle cx="17" cy="10" r="2.500"/><path d="M2 20c.5-3 3-5 6-5s5.500 2 6 5M15 15c3 0 5 1.500 6 4"/>'],
+ ['فرهنگ','ارزش‌ها و آیین‌های جامعه تعیین می‌کند چه چیزی مصرف شود، چگونه و با چه معنایی.','<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/>'],
+ ['تصمیم‌گیری و پس از خرید','تصمیم همیشه محاسبه‌ی دقیق نیست؛ میان‌بر و عادت هم دارد. رضایت پس از خرید، وفاداری بعدی را می‌سازد.','<path d="M12 3v6M12 9l-6 6v6M12 9l6 6v6"/>']
+];
+(function(){
+  var box=$('#concepts');
+  CONCEPTS.forEach(function(c,i){
+    var d=E('article','card rv');d.style.transitionDelay=(i%4*70)+'ms';
+    d.innerHTML='<svg class="ic" viewBox="0 0 24 24" aria-hidden="true">'+c[2]+'</svg>';
+    d.appendChild(E('h3','',c[0]));d.appendChild(E('p','',c[1]));box.appendChild(d);
+  });
+  var T=[['01','تحقیقات و ارائه‌ها','#research','کارهای کلاسی و فایل‌های دانلودی'],['02','کتابخانه','#library','کتاب اصلی و منابع تکمیلی'],['03','پرونده برندها','#brands','تحلیل برندها از زاویه‌ی رفتار مصرف‌کننده'],['04','مشاهیر و مدیران','#people','اندیشمندان و مدیران و نگاهشان به مشتری'],['05','درباره دانیال','#about','من و مسیر مطالعه‌ام'],['06','پروژه نهایی','#final','در حال شکل‌گیری...']];
+  var tb=$('#tiles');
+  T.forEach(function(t){
+    var a=E('a','tile rv');a.href=t[2];
+    a.appendChild(E('div','n',t[0]));a.appendChild(E('b','',t[1]));a.appendChild(E('span','',t[3]));tb.appendChild(a);
+  });
+  var st=$('#strip');
+  FIELDS.forEach(function(f,i){var s=E('span');s.appendChild(E('i','',String(i+1).padStart(2,'0')));s.appendChild(document.createTextNode(f));st.appendChild(s)});
+})();
+
+/* خلاصه کتاب اصلی: هر فصل را به این شکل اضافه کنید
+   {title:'فصل ۱: ...', text:'خلاصه فصل'} */
+var BOOK_SUMMARY = [];
+(function(){
+  var box=$('#chapList');
+  if(!BOOK_SUMMARY.length){
+    var c=E('div','card');c.appendChild(E('span','badge','BOOK'));
+    c.appendChild(E('h3','',PENDING));
+    c.appendChild(E('p','','خلاصه‌ی فصل‌به‌فصل کتاب سولومون پس از آماده شدن متن اینجا اضافه می‌شود.'));
+    box.appendChild(c);return;
+  }
+  BOOK_SUMMARY.forEach(function(ch){
+    var d=E('details');d.appendChild(E('summary','',ch.title));
+    var b=E('div','cb');b.textContent=ch.text;d.appendChild(b);box.appendChild(d);
+  });
+})();
+
+window.addEventListener('scroll',function(){
+  var h=document.documentElement,m=h.scrollHeight-h.clientHeight;
+  $('#prog').style.width=(m>0?h.scrollTop/m*100:0)+'%';
+},{passive:true});
+
+renderWork();renderBooks();renderBrands();renderPeople();route();
+</script>
+</body>
+</html>
